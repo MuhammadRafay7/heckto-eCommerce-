@@ -6,10 +6,10 @@ import { getProducts } from '../../../redux/getProducts'
 const Featured = () => {
     const allProduct = useSelector((state) => state.getProducts.data)
 
-    const dispacth = useDispatch()
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        dispacth(getProducts())
+        dispatch(getProducts())
     }, [])
 
     const newProducts = allProduct.slice(0, 3)

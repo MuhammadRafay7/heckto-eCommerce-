@@ -15,7 +15,7 @@ import '../../../node_modules/react-loading-skeleton/dist/skeleton.css'
 const ProductDetails = () => {
     const { id } = useParams();
 
-    const dispacth = useDispatch()
+    const dispatch = useDispatch()
     const products = useSelector((state) => state.getProductId)
 
     const [productTab, setProductTab] = useState([
@@ -48,7 +48,7 @@ const ProductDetails = () => {
         setProductTab(updatedTabs);
     };
     useEffect(() => {
-        dispacth(getProductId(id))
+        dispatch(getProductId(id))
     }, [])
 
     
